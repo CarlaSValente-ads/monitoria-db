@@ -13,7 +13,7 @@ INSERT INTO escola (nome, coordenador, ies_id, status) VALUES
     ('Escola de Saúde e Bem-Estar',            'Prof. Fernando Costa',   1, 'ativo'),
     ('Escola de Humanidades e Ciências Sociais','Profa. Juliana Reis',   1, 'ativo');
 
--
+
 INSERT INTO professor (matricula, nome, email, telefone, escola_id, status) VALUES
     ('PROF-001', 'Ana Paula Silveira',  'ana.silveira@Ucsal.edu.br',   '(71) 99111-1111', 1, 'ativo'),
     ('PROF-002', 'Carlos Eduardo Lima', 'carlos.lima@Ucsal.edu.br',    '(71) 99222-2222', 1, 'ativo'),
