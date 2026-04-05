@@ -97,21 +97,21 @@ INSERT INTO role (nome) VALUES
 -- ────────────────────────────────────────────────────────────
 INSERT INTO usuario (username, password, email, status, professor_id, role_id) VALUES
     ('admin',
-     '00001.',
+     '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy.',
      'admin@Ucsal.edu.br',
      'ativo',
      NULL,
      1),   
 
     ('ana.silveira',
-     '00002.',
+     '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy.',
      'ana.silveira@Ucsal.edu.br',
      'ativo',
      1,
      2),   
 
     ('carlos.lima',
-     '00003.',
+     '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy.',
      'carlos.lima@Ucsal.edu.br',
      'ativo',
      2,
