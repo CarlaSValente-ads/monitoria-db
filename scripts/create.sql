@@ -134,7 +134,7 @@ CREATE TABLE monitoria_relatorio (
 );
 
 -- ────────────────────────────────────────────────────────────
--- ÍNDICES  (performance em buscas frequentes)
+-- ÍNDICES  
 -- ────────────────────────────────────────────────────────────
 CREATE INDEX idx_escola_ies          ON escola(ies_id);
 CREATE INDEX idx_professor_escola    ON professor(escola_id);
@@ -148,5 +148,4 @@ CREATE INDEX idx_monitor_professor   ON aluno_monitor(professor_id);
 CREATE INDEX idx_relatorio_aluno     ON monitoria_relatorio(aluno_id);
 
 -- ============================================================
---  FIM DE create.sql
 -- ============================================================
