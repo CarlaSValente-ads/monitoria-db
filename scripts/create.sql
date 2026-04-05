@@ -1,17 +1,12 @@
--- ============================================================
---  SISTEMA MONITORIA - create.sql
---  Repo: monitoria-db/scripts/create.sql
---  Regras: sem DELETE, status ativo/inativo, FK em tudo
--- ============================================================
 
 -- ────────────────────────────────────────────────────────────
 -- 0. EXTENSÕES
 -- ────────────────────────────────────────────────────────────
-CREATE EXTENSION IF NOT EXISTS "pgcrypto";   -- uuid_generate_v4() alternativo
-CREATE EXTENSION IF NOT EXISTS "unaccent";   -- buscas sem acento (opcional)
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";   
+CREATE EXTENSION IF NOT EXISTS "unaccent";   
 
 -- ────────────────────────────────────────────────────────────
--- 1. IES  (Instituição de Ensino Superior)
+-- 1. IES  
 -- ────────────────────────────────────────────────────────────
 CREATE TABLE ies (
     id        SERIAL        PRIMARY KEY,
@@ -82,7 +77,7 @@ CREATE TABLE disciplina (
 );
 
 -- ────────────────────────────────────────────────────────────
--- 6. MATRIZ  (grade curricular de um curso)
+-- 6. MATRIZ 
 -- ────────────────────────────────────────────────────────────
 CREATE TABLE matriz (
     id             SERIAL        PRIMARY KEY,
@@ -95,13 +90,12 @@ CREATE TABLE matriz (
 );
 
 -- ────────────────────────────────────────────────────────────
--- 7. MATRIZ_DISCIPLINA  (N:N entre matriz e disciplina)
+-- 7. MATRIZ_DISCIPLINA  
 -- ────────────────────────────────────────────────────────────
 CREATE TABLE matriz_disciplina (
     id                SERIAL   PRIMARY KEY,
     matriz_id         INT      NOT NULL REFERENCES matriz(id),
     disciplina_id     INT      NOT NULL REFERENCES disciplina(id),
-    -- pre_requisito: FK opcional para outra disciplina da mesma matriz
     pre_requisito_id  INT               REFERENCES disciplina(id),
     UNIQUE (matriz_id, disciplina_id)
 );
