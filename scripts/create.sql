@@ -132,7 +132,27 @@ CREATE TABLE monitoria_relatorio (
     ocorrencias  TEXT,
     parecer      TEXT
 );
-
+-- ────────────────────────────────────────────────────────────
+-- 10. ROLE
+-- ────────────────────────────────────────────────────────────
+CREATE TABLE role (
+    id    SERIAL       PRIMARY KEY,
+    nome  VARCHAR(50)  NOT NULL UNIQUE
+);
+-- ────────────────────────────────────────────────────────────
+-- 11. USUARIO
+-- ────────────────────────────────────────────────────────────
+CREATE TABLE usuario (
+    id            SERIAL        PRIMARY KEY,
+    username      VARCHAR(100)  NOT NULL UNIQUE,
+    password      VARCHAR(255)  NOT NULL,
+    email         VARCHAR(200)  NOT NULL UNIQUE,
+    status        VARCHAR(10)   NOT NULL DEFAULT 'ativo'
+                                CHECK (status IN ('ativo','inativo')),
+    professor_id  INT                    REFERENCES professor(id),
+    role_id       INT           NOT NULL REFERENCES role(id),
+    data_cadastro DATE          NOT NULL DEFAULT CURRENT_DATE
+);
 -- ────────────────────────────────────────────────────────────
 -- ÍNDICES  
 -- ────────────────────────────────────────────────────────────
