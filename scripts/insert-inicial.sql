@@ -15,12 +15,12 @@ INSERT INTO escola (nome, coordenador, ies_id, status) VALUES
 
 
 INSERT INTO professor (matricula, nome, email, telefone, escola_id, status) VALUES
-    ('PROF-001', 'Ana Paula Silveira',  'ana.silveira@Ucsal.edu.br',   '(71) 99111-1111', 1, 'ativo'),
-    ('PROF-002', 'Carlos Eduardo Lima', 'carlos.lima@Ucsal.edu.br',    '(71) 99222-2222', 1, 'ativo'),
-    ('PROF-003', 'Mariana Souza',       'mariana.souza@Ucsal.edu.br',  '(71) 99333-3333', 1, 'ativo'),
-    ('PROF-004', 'João Ferreira',       'joao.ferreira@Ucsal.edu.br',  '(71) 99444-4444', 2, 'ativo'),
-    ('PROF-005', 'Patrícia Nunes',      'patricia.nunes@Ucsal.edu.br', '(71) 99555-5555', 2, 'ativo'),
-    ('PROF-006', 'Ricardo Barros',      'ricardo.barros@Ucsal.edu.br', '(71) 99666-6666', 3, 'ativo');
+    ('PROF-001', 'Ana Paula Silveira',  'ana.silveira@ucsal.edu.br',   '(71) 99111-1111', 1, 'ativo'),
+    ('PROF-002', 'Carlos Eduardo Lima', 'carlos.lima@ucsal.edu.br',    '(71) 99222-2222', 1, 'ativo'),
+    ('PROF-003', 'Mariana Souza',       'mariana.souza@ucsal.edu.br',  '(71) 99333-3333', 1, 'ativo'),
+    ('PROF-004', 'João Ferreira',       'joao.ferreira@ucsal.edu.br',  '(71) 99444-4444', 2, 'ativo'),
+    ('PROF-005', 'Patrícia Nunes',      'patricia.nunes@ucsal.edu.br', '(71) 99555-5555', 2, 'ativo'),
+    ('PROF-006', 'Ricardo Barros',      'ricardo.barros@ucsal.edu.br', '(71) 99666-6666', 3, 'ativo');
 
 -- ────────────────────────────────────────────────────────────
 
@@ -97,22 +97,22 @@ INSERT INTO role (nome) VALUES
 -- ────────────────────────────────────────────────────────────
 INSERT INTO usuario (username, password, email, status, professor_id, role_id) VALUES
     ('admin',
-     '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy.',
-     'admin@Ucsal.edu.br',
+     '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy',
+     'admin@ucsal.edu.br',
      'ativo',
      NULL,
      1),   
 
     ('ana.silveira',
-     '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy.',
-     'ana.silveira@Ucsal.edu.br',
+     '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy',
+     'ana.silveira@ucsal.edu.br',
      'ativo',
      1,
      2),   
 
     ('carlos.lima',
-     '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy.',
-     'carlos.lima@Ucsal.edu.br',
+     '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy',
+     'carlos.lima@ucsal.edu.br',
      'ativo',
      2,
      2);   
